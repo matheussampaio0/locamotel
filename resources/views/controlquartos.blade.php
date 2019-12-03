@@ -11,16 +11,32 @@
           </div>
         </div>
 
-        <table>
-        	<tr>
-        		<th>Nome</th>
-        		<th>Descrição</th>
-        	</tr>
-        	@foreach($quartos as $quarto)
-        	<tr>
-        		<td>{{$quarto->nome}}</td>
-        		<td>{{$quarto->description}}</td>
-        	</tr>
-        	@endforeach
-        </table>
+        <div class="row">
+            <div style="margin: 20px 50px 30px;">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2><i class="fa fa-flag-o red"></i><strong>Painel de Administração</strong></h2>
+                  </div>
+                  <div class="panel-body">
+                    <table class="table bootstrap-datatable countries">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Funcionários
+                              <span class="badge badge-primary badge-pill">14</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Quartos
+                              <span class="badge badge-primary badge-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Morbi leo risus
+                              <span class="badge badge-primary badge-pill">1</span>
+                            </li>
+                          </ul>
+                    </table>
+                  </div>
+    
+                </div>
+              </div>
+        </div>
 @endsection

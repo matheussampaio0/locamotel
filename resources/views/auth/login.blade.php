@@ -37,7 +37,10 @@
     ======================================================= -->
 </head>
 
-<body class="login-img5-body">
+<body class="login-img5-body"
+style="background-image: url('https://uploads.metropoles.com/wp-content/uploads/2019/11/28092341/GettyImages-157334908-960x576.jpg');
+background-attachment: fixed;
+background-size: cover;">
 
   <div class="container">
 
