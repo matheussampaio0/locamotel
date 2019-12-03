@@ -27,13 +27,17 @@ class HomeController extends Controller
     public function index(Quarto $quarto)
     {
         $quartos = $quarto->all();
+
+        $qtdquartos = $quartos->filter(function ($quarto) {
+            return $quarto->id;
+        })->count();
+
         $countlivres = $quartos->filter(function ($quarto) {
             return $quarto->livre;
         })->count();
-        $countocupados = $quartos->filter(function ($quarto) {
-            return !$quarto->livre;
-        })->count();
 
-        return view('home', compact('quartos', 'countlivres', 'countocupados'));
+        $countocupados =  $qtdquartos - $countlivres;
+
+        return view('home', compact('quartos', 'countlivres', 'countocupados', 'qtdquartos'));
     }
 }

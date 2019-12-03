@@ -43,8 +43,6 @@
 </head>
 
 <body>
-    @foreach($quartos as $quarto)
-  @endforeach
   <!-- container section start -->
   <section id="container" class="">
 
