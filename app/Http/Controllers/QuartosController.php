@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\quarto;
+use App\User;
 
 class QuartosController extends Controller
 {
@@ -22,10 +23,27 @@ class QuartosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Quarto $quarto)
+    public function index(Quarto $quarto, User $user)
     {
-    	$quartos = $quarto->all();
-        return view('controlquartos', compact('quartos'));
+        $quartos = $quarto->all();
+        $users = $user->all();
+
+        # Count how many users are in the database
+        $qtdfuncionarios = $users->filter(function ($user) {
+            return $user->id;
+        })->count();
+
+        # Count how many rooms are in the database
+        $qtdquartos = $quartos->filter(function ($quarto) {
+            return $quarto->id;
+        })->count();
+
+        return view('controlquartos', compact('quartos', 'qtdfuncionarios', 'qtdquartos'));
+    }
+
+    public function helpsys()
+    {
+        return view('helpsystem');
     }
 
     public function add()

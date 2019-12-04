@@ -77,9 +77,6 @@
                 <a href="#"><i class="icon_profile"></i> Meu Perfil</a>
               </li>
               <li>
-                <a href="#"><i class="icon_clock_alt"></i> Admin</a>
-              </li>
-              <li>
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
@@ -104,19 +101,23 @@
         <ul class="sidebar-menu">
           <li class="">
             <a class="" href=" {{ route('home') }}">
-                          <i class="icon_house_alt"></i>
-                          <span>Painel de Controle</span>
-                      </a>
-          <a class="" href="{{route('controlequartos')}}">
+              <i class="icon_house_alt"></i>
+                <span>Painel de Controle</span>
+            </a>
+            @if((Auth::user()->type) == 1)
+            <a class="" href="{{route('controlequartos')}}">
               <i class="icon_genius"></i>
-              <span>Admin</span>
-          </a>
+                <span>Admin</span>
+            </a>
+            @endif
           </li>
           <li>
+            @if((Auth::user()->type) == 1)
             <a class="" href="chart-chartjs.html">
               <i class="icon_piechart"></i>
-              <span>Relatórios</span>
+                <span>Relatórios</span>
             </a>
+            @endif
           </li>
         </ul>
         <!-- sidebar menu end-->

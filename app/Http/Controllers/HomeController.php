@@ -28,14 +28,17 @@ class HomeController extends Controller
     {
         $quartos = $quarto->all();
 
+        # Count how many rooms are in the database
         $qtdquartos = $quartos->filter(function ($quarto) {
             return $quarto->id;
         })->count();
 
+        # Count how many rooms are free
         $countlivres = $quartos->filter(function ($quarto) {
             return $quarto->livre;
         })->count();
 
+        # Count how many rooms are busy
         $countocupados =  $qtdquartos - $countlivres;
 
         return view('home', compact('quartos', 'countlivres', 'countocupados', 'qtdquartos'));

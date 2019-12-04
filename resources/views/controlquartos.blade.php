@@ -22,15 +22,15 @@
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Funcionários
-                              <span class="badge badge-primary badge-pill">14</span>
+                              <span class="badge badge-primary badge-pill">{{$qtdfuncionarios}}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Quartos
-                              <span class="badge badge-primary badge-pill">2</span>
+                            <span class="badge badge-primary badge-pill">{{$qtdquartos}}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Morbi leo risus
-                              <span class="badge badge-primary badge-pill">1</span>
+                              Produtos
+                              <span class="badge badge-primary badge-pill">X</span>
                             </li>
                           </ul>
                     </table>
