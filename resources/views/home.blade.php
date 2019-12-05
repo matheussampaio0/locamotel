@@ -13,21 +13,25 @@
   
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-              <div class="info-box green-bg">
-                <i class="fa fa-check"></i>
-                <div class="count">{{$countlivres}}</div>
-                <div class="title">Quartos Disponíveis</div>
-              </div>
+                <a href="{{route('home')}}" style="text-decoration:none;">
+                  <div class="info-box green-bg">
+                  <i class="fa fa-check"></i>
+                  <div class="count">{{$countlivres}}</div>
+                  <div class="title">Quartos Disponíveis</div>
+                </div>
+              </a>
               <!--/.info-box-->
             </div>
             <!--/.col-->
   
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-              <div class="info-box red-bg">
-                <i class="fa fa-exclamation-triangle"></i>
-                <div class="count">{{$countocupados}}</div>
-                <div class="title">Quartos Indisponíveis</div>
-              </div>
+              <a href="{{route('home')}}" style="text-decoration:none;">
+                <div class="info-box red-bg">
+                  <i class="fa fa-exclamation-triangle"></i>
+                  <div class="count">{{$countocupados}}</div>
+                  <div class="title">Quartos Indisponíveis</div>
+                </div>
+              </a>
               <!--/.info-box-->
             </div>
             <!--/.col-->

@@ -102,12 +102,16 @@
           <li class="">
             <a class="" href=" {{ route('home') }}">
               <i class="icon_house_alt"></i>
-                <span>Painel de Controle</span>
+                <span>| Controle</span>
+            </a>
+            <a class="" href=" {{ route('helpsys') }}">
+              <i class="icon_question"></i>
+                <span>| Painel de Ajuda</span>
             </a>
             @if((Auth::user()->type) == 1)
             <a class="" href="{{route('controlequartos')}}">
               <i class="icon_genius"></i>
-                <span>Admin</span>
+                <span>| Admin</span>
             </a>
             @endif
           </li>
@@ -115,7 +119,7 @@
             @if((Auth::user()->type) == 1)
             <a class="" href="chart-chartjs.html">
               <i class="icon_piechart"></i>
-                <span>Relatórios</span>
+                <span>| Relatórios</span>
             </a>
             @endif
           </li>

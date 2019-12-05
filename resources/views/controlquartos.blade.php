@@ -15,23 +15,32 @@
             <div style="margin: 20px 50px 30px;">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <h2><i class="fa fa-flag-o red"></i><strong>Painel de Administração</strong></h2>
+                    <h2><i class="fa fa-cog"></i><strong>Painel de Administração</strong></h2>
                   </div>
                   <div class="panel-body">
                     <table class="table bootstrap-datatable countries">
+                      <p>Olá <strong>{{Auth::user()->name}}</strong>.</p> 
+                    <p>Seja bem-vindo ao <strong>Painel de Administração</strong>, aqui você pode: editar, adicionar ou remover os dados informados abaixo.</p>
+                    <br>
                         <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Funcionários
+                            <a href="{{route('home')}}" style="text-decoration:none;">
+                              <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <i class="fa fa-user" style="margin: 2px;"></i> | Funcionários
                               <span class="badge badge-primary badge-pill">{{$qtdfuncionarios}}</span>
                             </li>
+                          </a>
+                          <a href="{{route('home')}}" style="text-decoration:none;">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Quartos
+                            <i class="glyphicon glyphicon-bed" style="margin: 2px;"></i> | Quartos
                             <span class="badge badge-primary badge-pill">{{$qtdquartos}}</span>
                             </li>
+                          </a>
+                          <a href="{{route('home')}}" style="text-decoration:none;">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Produtos
+                                <i class="fa fa-dropbox" aria-hidden="true" style="margin: 2px;"></i> | Produtos
                               <span class="badge badge-primary badge-pill">X</span>
                             </li>
+                          </a>
                           </ul>
                     </table>
                   </div>
