@@ -18,7 +18,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/', 'QuartosController@index')->name('adminpanel');
-    Route::get('/add', 'QuartosController@add');
+    Route::get('/controlfuncionarios', 'QuartosController@controlfuncionarios')->name('controlfuncionarios');
 });
+
+
 
 Route::get('/helpsys', 'QuartosController@helpsys')->name('helpsys');

@@ -41,13 +41,13 @@ class QuartosController extends Controller
         return view('controlquartos', compact('quartos', 'qtdfuncionarios', 'qtdquartos'));
     }
 
+    public function controlfuncionarios()
+    {
+        return view('controlfunc');
+    }
+
     public function helpsys()
     {
         return view('helpsystem');
-    }
-
-    public function add()
-    {
-        return 'teste';
     }
 }
