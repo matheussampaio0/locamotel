@@ -15,6 +15,10 @@ Route::get('/', 'SiteController@index');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/controlequartos', 'QuartosController@index')->name('controlequartos');
-Route::get('/controlequartos/add', 'QuartosController@add');
+
+Route::group(['prefix' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::get('/', 'QuartosController@index')->name('adminpanel');
+    Route::get('/add', 'QuartosController@add');
+});
+
 Route::get('/helpsys', 'QuartosController@helpsys')->name('helpsys');

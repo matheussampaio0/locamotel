@@ -20,7 +20,7 @@
                   <div class="panel-body">
                     <table class="table bootstrap-datatable countries">
                       <p>Olá <strong>{{Auth::user()->name}}</strong>.</p> 
-                    <p>Seja bem-vindo ao <strong>Painel de Administração</strong>, aqui você pode: editar, adicionar ou remover os dados informados abaixo.</p>
+                    <p>Seja bem-vindo ao <strong>Painel de Administração</strong>, aqui você pode: editar, adicionar ou remover os dados das tabelas informadas abaixo.</p>
                     <br>
                         <ul class="list-group">
                             <a href="{{route('home')}}" style="text-decoration:none;">

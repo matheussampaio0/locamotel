@@ -109,7 +109,7 @@
                 <span>| Painel de Ajuda</span>
             </a>
             @if((Auth::user()->type) == 1)
-            <a class="" href="{{route('controlequartos')}}">
+            <a class="" href="{{route('adminpanel')}}">
               <i class="icon_genius"></i>
                 <span>| Admin</span>
             </a>
