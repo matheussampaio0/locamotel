@@ -3,10 +3,10 @@
 @section('content')
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i> Controle de Quartos</h3>
+            <h3 class="page-header"><i class="fa fa-laptop"></i> Painel do Admin</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href=" {{ route('home') }}">Painel</a></li>
-              <li><i class="fa fa-laptop"></i>Controle de Quartos</li>
+              <li><i class="fa fa-laptop"></i>Painel do Admin</li>
             </ol>
           </div>
         </div>

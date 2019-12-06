@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\quarto;
 use App\User;
+use App\Funcionario;
 
 class QuartosController extends Controller
 {
@@ -25,6 +26,7 @@ class QuartosController extends Controller
      */
     public function index(Quarto $quarto, User $user)
     {
+        # Save all data of table 'quarto' in $quartos
         $quartos = $quarto->all();
         $users = $user->all();
 
@@ -41,9 +43,12 @@ class QuartosController extends Controller
         return view('controlquartos', compact('quartos', 'qtdfuncionarios', 'qtdquartos'));
     }
 
-    public function controlfuncionarios()
+    public function controlfuncionarios(Funcionario $funcionario)
     {
-        return view('controlfunc');
+        # Save all data of table 'funcionario' in $funcionarios
+        $funcionarios = $funcionario->all();
+
+        return view('controlfunc', compact('funcionarios'));
     }
 
     public function helpsys()

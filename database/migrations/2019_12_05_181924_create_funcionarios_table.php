@@ -16,15 +16,15 @@ class CreateFuncionariosTable extends Migration
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome', 150);
-            $table->varchar('celular', 15);
-            $table->varchar('celular2', 15);
-            $table->varchar('cpf', 16);
-            $table->varchar('rg', 20);
-            $table->varchar('rua');
-            $table->varchar('bairro');
-            $table->varchar('cidade');
-            $table->varchar('numerocasa');
-            $table->varchar('cep');
+            $table->string('celular', 15);
+            $table->string('celular2', 15);
+            $table->string('cpf', 16);
+            $table->string('rg', 20);
+            $table->string('rua');
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('numerocasa');
+            $table->string('cep');
             $table->date('datanasc');
             $table->timestamps();
         });
