@@ -21,7 +21,6 @@
           </div>
           <div class="panel-body">
             <table class="table bootstrap-datatable countries">
-              <p>Olá <strong>{{Auth::user()->name}}</strong>.</p> 
             <p>Seja bem-vindo ao <strong>Controle de Funcionário</strong>, aqui você pode: adicionar novos funcionários, remover ou editar os já cadastrados.</p>
             <br>
                     <table class="table table-hover table-dark">
@@ -41,11 +40,15 @@
                             <td>{{ $funcionario->nome }}</td>
                             <td>{{ $funcionario->cpf }}</td>
                             <td>{{ $funcionario->celular }}</td>
+                            <td><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> <a><i class="fa fa-trash-o" aria-hidden="true"></i><a></td>
                           </tr>
                           @endforeach
                           <caption>Lista de Funcionários</caption>
                         </tbody>
                       </table>
+                      <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Adicionar Funcionário
+                          </button>
             </table>
           </div>
         </div>
