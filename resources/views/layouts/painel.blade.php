@@ -12,7 +12,7 @@
   <title>LocaMotel - Painel de Controle</title>
 
   <!-- Bootstrap CSS -->
-  <link href="/NiceAdmin/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- bootstrap theme -->
   <link href="/NiceAdmin/css/bootstrap-theme.css" rel="stylesheet">
   <!--external css-->
@@ -56,15 +56,12 @@
       <a href="{{route('home')}}" class="logo">Loca <span class="lite">Motel</span></a>
       <!--logo end-->
 
-      <div class="nav search-row" id="top_menu">
-      </div>
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
           <!-- user login dropdown start-->
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <a data-toggle="dropdown" href="#">
               <span class="profile-ava">
                 <img alt="" src="/NiceAdmin/img/avatar_small.jpg">
               </span>
@@ -144,11 +141,11 @@
   <script src="/NiceAdmin/js/jquery.js"></script>
   <script src="/NiceAdmin/js/jquery-ui-1.10.4.min.js"></script>
   <script src="/NiceAdmin/js/jquery-1.8.3.min.js"></script>
-  <script type="/NiceAdmin/text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="/NiceAdmin/text/javascript" src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   <!-- bootstrap -->
   <script src="/NiceAdmin/js/bootstrap.min.js"></script>
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'/>
-
   <!-- nice scroll -->
   <script src="/NiceAdmin/js/jquery.scrollTo.min.js"></script>
   <script src="/NiceAdmin/js/jquery.nicescroll.js" type="text/javascript"></script>
